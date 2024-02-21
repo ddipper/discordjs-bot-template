@@ -2,9 +2,11 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('hello')
-		.setDescription('123'),
+		.setName('ping')
+		.setDescription(`Get the bot's ping.`),
 	async execute(interaction) {
-        interaction.reply({content:`World!`,ephemeral :true})
+		const ping = Math.round(interaction.client.ws.ping);
+      interaction.reply(`${ping}ms.`);
+		return;
     }
 }
