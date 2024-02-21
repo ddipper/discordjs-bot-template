@@ -14,5 +14,13 @@
     "Template"
   ],
   "author": "ddipperq",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddipper/Discord-Bot-Template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ddipper/Discord-Bot-Template/issues"
+  },
+  "homepage": "https://github.com/ddipper/Discord-Bot-Template#readme"
 }
