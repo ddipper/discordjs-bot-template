@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+const fs = require('node:fs')
 const path = __dirname + '/../../events/';
 
 module.exports = (discord) => {

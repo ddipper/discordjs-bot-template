@@ -1,11 +1,12 @@
-import { Client } from 'discord.js';
-import commands_init from './utils/commands_init'
-import events_init from './utils/events_init'
-const { token } = require('./config.json');
+const Client = require('discord.js')
+const commands_init = require('./utils/commands_init')
+const events_init = require ('./utils/events_init')
+const config = require("dotenv")
+config({ path: '../env' });
 
 const client = new Client({ intents: 131071 });
 
-client.commands = new Collection();
+commands_init(client);
+events_init(client);
 
-
-client.login(token);
+client.login(`${process.env.TOKEN}`);
