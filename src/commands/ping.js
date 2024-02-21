@@ -5,8 +5,9 @@ module.exports = {
 		.setName('ping')
 		.setDescription(`Get the bot's ping.`),
 	async execute(interaction) {
-		const ping = Math.round(interaction.client.ws.ping);
-      interaction.reply(`${ping}ms.`);
+      interaction.reply('1');
+		const ping = interaction.createdTimestamp - interaction.createdTimestamp;
+		interaction.editReply(`Latency \`${ping}ms\`\n API \`${Math.round(interaction.client.ws.ping)}ms\``);
 		return;
     }
 }
