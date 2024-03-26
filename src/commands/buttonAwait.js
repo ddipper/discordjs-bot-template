@@ -8,7 +8,7 @@ module.exports = {
         const button = new ButtonBuilder()
             .setLabel('Button')
             .setCustomId('buttonAwait')
-            .setStyle(ButtonStyle.Secondary);
+            .setStyle(ButtonStyle.Primar);
 
         const response = await interaction.reply({components: [new ActionRowBuilder().addComponents(button)]});
 
